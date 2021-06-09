@@ -24,6 +24,13 @@ PERSON* construct_person(){
     p->setAge = setAge;
 }
 
+void destruct_person(PERSON* p){
+    free(p->firstName);
+    free(p->lastName);
+    free(p->phoneNumber);
+    free(p);
+}
+
 int getAge(PERSON* self) {
     return self->age;
 }

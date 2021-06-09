@@ -21,3 +21,4 @@ typedef struct PERSON{
 } PERSON;
 
 PERSON* construct_person();
+void destruct_person(PERSON*);
