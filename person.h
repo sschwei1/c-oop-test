@@ -7,17 +7,19 @@ typedef struct PERSON{
     int age;
     char* phoneNumber;
 
-    char* (*getFirstName)(struct PERSON* self);
-    struct PERSON* (*setFirstName)(struct PERSON* self, char*);
+    char* (*getFirstName)(struct PERSON*);
+    struct PERSON* (*setFirstName)(struct PERSON*, char*);
 
-    char* (*getLastName)(struct PERSON* self);
-    struct PERSON* (*setLastName)(struct PERSON* self, char*);
+    char* (*getLastName)(struct PERSON*);
+    struct PERSON* (*setLastName)(struct PERSON*, char*);
 
-    int (*getAge)(struct PERSON* self);
-    struct PERSON* (*setAge)(struct PERSON* self, int);
+    int (*getAge)(struct PERSON*);
+    struct PERSON* (*setAge)(struct PERSON*, int);
 
-    char* (*getPhoneNumber)(struct PERSON* self);
-    struct PERSON* (*setPhoneNumber)(struct PERSON* self, char*);
+    char* (*getPhoneNumber)(struct PERSON*);
+    struct PERSON* (*setPhoneNumber)(struct PERSON*, char*);
+
+    void (*print)(struct PERSON*);
 } PERSON;
 
 PERSON* construct_person();

@@ -1,11 +1,11 @@
-#include <stdio.h>
-
 #include "person.h"
 
 int main() {
     PERSON* person = construct_person();
+    person->setFirstName(person, "test");
     person->setAge(person, 10);
-    printf("age:%d\n", person->getAge(person));
+    person->print(person);
     destruct_person(person);
+
     return 0;
 }
