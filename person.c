@@ -35,6 +35,8 @@ PERSON* construct_person(){
     p->setPhoneNumber = setPhoneNumber;
 
     p->print = printPerson;
+
+    return p;
 }
 
 void destruct_person(PERSON* p){
